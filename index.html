@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="score">0</div>
+    <div class="canvas__outer">
+        <canvas></canvas>
+    </div>
+
+    <div class="startMenu">
+        <h1><span class="small-font">super</span>SNAKE</h1>
+        <h2><span class="small-font">super</span>SNAKE</h2>
+        <h3 class="author">by Dlazder</h3>
+        <h4>Select the number of players:</h4>
+        <div class="player-btns">
+            <button class="btn onePlayer">1P</button>
+            <button class="btn twoPlayers">2P</button>
+        </div>
+        <div class="version">version 0.2</div>
+    </div>
+
+    <div class="optionsMenu">
+        <div class="optionsMenu__title">Game Options</div>
+        
+        
+        <div class="flex-container">
+            <p>Game area width:</p>
+            <p>Game area height:</p>
+        </div>
+        <div class="flex-container">
+            <input type="range" value="20" class="input__canvas-size" name="width" id="input-canvas-width" min="10" max="50">
+            <input type="range" value="20" class="input__canvas-size" name="height" id="input-canvas-height" min="10" max="50">
+        </div>
+        <div class="flex-container">
+            <p class="input-canvas-width-value">0</p>
+            <p class="input-canvas-height-value">0</p>
+        </div>
+        
+
+
+        <button class="startGame">Start Game</button>
+    </div>
+    
+    <div class="btns">
+        <button class="direction-btn" id="btnUp">W</button>
+        <div class="btns__inner">
+            <br>
+            <button class="direction-btn" id="btnLeft">A</button>
+            <button class="direction-btn" id="btnRight">D</button>
+            <br>
+        </div>
+        <button class="direction-btn" id="btnDown">S</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

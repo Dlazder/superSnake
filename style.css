@@ -1,0 +1,242 @@
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+body {
+    background:var(--background-color);
+    font-family: monospace;
+}
+html, body {
+    margin: 0;
+}
+:root {
+    --background-color: #2c2732;
+    --font-color: #D21855;
+}
+.score {
+    width: 200px;
+    margin: 50px auto 20px;
+    color: var(--font-color);
+    background: #121214;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 40px 10px #101010;
+}
+.canvas__outer {
+    background-color: #101010;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23525053'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 16px 16px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 10px #101010;
+    transition: .1s;
+    width: fit-content;
+}
+
+/* Start menu */
+.startMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #2c2732;
+    z-index: 100;
+}
+h1 {
+    text-align: center;
+    font-family: monospace;
+    color: #D21855;
+    font-size: 100px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: 50px 0 0 0;
+    cursor: default;
+}
+h2 {
+    text-align: center;
+    font-family: monospace;
+    color: #be788f;
+    font-size: 100px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 50px 0 0;
+    z-index: 0;
+    filter: blur(10px);
+    animation: blur 2s infinite alternate;
+}
+@keyframes blur {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(15px);
+    }
+}
+span {
+    font-size: 40px;
+}
+h3 {
+    text-align: center;
+    color: #D21855;
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 500px;
+    margin-top: 20px;
+    margin-bottom: 300px;
+    cursor: default;
+}
+h4 {
+    text-align: center;
+    color: #D21855;
+    font-family: monospace;
+    margin: 0 auto 40px;
+    cursor: default;
+}
+.btn {
+    background-color: #5c5fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: #101010 0px 0px 10px 0px;
+    border: #ad6e83;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+    transition: .3s;
+    font-family: monospace;
+    font-weight: bold;
+}
+.btn:hover {
+    cursor: pointer;
+    box-shadow: #101010 0px 0px 10px 5px;
+}
+.player-btns {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.version {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: monospace;
+    color: rgba(128, 128, 128, 0.171);
+    font-size: 20px;
+    margin: 5px;
+    cursor: default;
+}
+.hidden {
+    display: none;
+}
+
+/* Options menu */
+
+.optionsMenu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: var(--background-color);
+    z-index: 10;
+}
+.optionsMenu__title {
+    text-align: center;
+    width: 100%;
+    color: var(--font-color);
+    font-size: 100px;
+    font-family: monospace;
+    margin: 50px auto 200px;
+}
+
+.startGame {
+    color: var(--font-color);
+    background: transparent;
+    border: none;
+    font-family: monospace;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+p {
+    color: var(--font-color);
+}
+/* Phone btns */
+.btns {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+.btns__inner {
+    display: flex;
+    width: 220px;
+    margin: 0 auto;
+}
+.direction-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: var(--font-color);
+    color: white;
+    font-size: 20px;
+    margin: 0 auto;
+    display: block;
+}
+@media (min-width: 768px) {
+    .btns {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .twoPlayers {
+        display: none;
+    }
+}
+@media (max-width: 570px) {
+    h3 {
+        margin-left: 350px;
+    }
+}
+@media (max-width: 460px) {
+    h3 {
+        margin-left: 300px;
+    }
+}
+@media (max-width: 410px) {
+    h3 {
+        margin-left: 200px;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+    .optionsMenu__title {
+        font-size: 60px;
+    }
+    .flex-container {
+        width: 300px;
+    }
+}
