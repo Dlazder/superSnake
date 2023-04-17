@@ -70,7 +70,7 @@ class Apple {
         this.y = Math.floor(Math.random() * (canvas.height/grid)) * grid;
     }
     draw() {
-        c.fillStyle = 'green';
+        c.fillStyle = 'red';
         c.fillRect(this.x + 4, this.y + 4, grid/2, grid/2);
     }
     update() {
